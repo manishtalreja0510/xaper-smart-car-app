@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                 itemBuilder: (context, index){
                   return GestureDetector(
-                    onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>StationDetailsScreen())),
+                      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>StationDetailsScreen())),
                     child: Image.asset(
                       homePageSampleData,
                       fit: BoxFit.fill,

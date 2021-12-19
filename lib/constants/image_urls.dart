@@ -13,6 +13,7 @@ const scooter = "assets/images/scooter.png";
 const station_details_background_image = "assets/images/station_details_background_image.png";
 const station_details_background_image2 = "assets/images/station_details_background_image2.png";
 const visa_card = "assets/images/visa_card.png";
+const car_image = "assets/images/car_image.png";
 
 
 
@@ -35,3 +36,8 @@ const paytm_logo = "assets/icons/paytm_logo.png";
 const paypal_logo = "assets/icons/paypal_logo.png";
 const upi_logo = "assets/icons/upi_logo.png";
 const clock_icon = "assets/icons/clock_icon.png";
+const phone_icon = "assets/icons/phone_icon.png";
+const chargin_done_icon = "assets/icons/chargin_done_icon.png";
+const chargin_undone_icon = "assets/icons/charging_undone_icon.png";
+
+

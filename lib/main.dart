@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:xaper_smart_car_app/pages/connection_pages/connected_established_screen.dart';
+import 'package:xaper_smart_car_app/pages/connection_pages/connection_not_established.dart';
+import 'package:xaper_smart_car_app/pages/register_screen.dart';
 import 'package:xaper_smart_car_app/pages/welcome_screen_1.dart';
 
 void main() {
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFFAC8404),
         primarySwatch: Colors.amber,
       ),
-      home: const WelcomeScreen1()
+      home: const ConnectionNotEstablishedScreen()
     );
   }
 }

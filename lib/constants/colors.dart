@@ -12,6 +12,6 @@ class MyColors{
   static const Color lightPinkColor = Color(0xFFFFE8E8);
   static const Color lightBlueColor = Color(0xFFEEF5FF);
   static const Color blueColor = Colors.blue;
-
+  static const Color greenColor = Colors.green;
 
 }
