@@ -10,6 +10,19 @@ class WaitingForOTPScreen extends StatefulWidget {
 }
 
 class _WaitingForOTPScreenState extends State<WaitingForOTPScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    navigateToOTPScreen();
+    super.initState();
+  }
+
+  navigateToOTPScreen()async{
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>EnterOtpScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

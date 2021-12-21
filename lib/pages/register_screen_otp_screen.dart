@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
+import 'package:xaper_smart_car_app/constants/otp_verification_widget.dart';
 class EnterOtpScreen extends StatefulWidget {
   const EnterOtpScreen({Key? key}) : super(key: key);
 
@@ -12,6 +13,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -37,13 +39,15 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
               SizedBox(height: 20,),
               Row(
                 children: [
-                  Expanded(child: Text('Enter the OTP received in your mobile number', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: MyColors.primaryColor),)),
+                  Text('Enter the OTP received in your mobile number', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: MyColors.primaryColor),),
                   SizedBox(
                     width: 20,
                   )
                 ],
               ),
-              SizedBox(height: 250,),
+              SizedBox(height: 50,),
+              Expanded(child: PinCodeVerificationScreen('+919340223515')),
+              SizedBox(height: 100,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
-import 'package:xaper_smart_car_app/pages/book_now_screen.dart';
+import 'package:xaper_smart_car_app/pages/charging_stations/book_now_screen.dart';
 
 class StationDetailsScreen extends StatefulWidget {
   const StationDetailsScreen({Key? key}) : super(key: key);
@@ -208,7 +208,8 @@ class _StationDetailsScreenState extends State<StationDetailsScreen> {
                       );
                     },
                   ),
-                )
+                ),
+                SizedBox(height: 40,)
 
               ],
             ),

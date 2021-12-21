@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
+import 'package:xaper_smart_car_app/pages/charging_stations/select_date_time_screen.dart';
 class BookNowScreen extends StatefulWidget {
   const BookNowScreen({Key? key}) : super(key: key);
 
@@ -130,19 +131,22 @@ class _BookNowScreenState extends State<BookNowScreen> {
                 ),
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
-                    decoration: BoxDecoration(
-                        color: MyColors.lightBlueColor,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(clock_icon),
-                        SizedBox(width: 10,),
-                        Text('Select Your Time Slot', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14, color: MyColors.blueColor),),
-                      ],
+                  child: GestureDetector(
+                    onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectDateAndTimeScreen())),
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+                      decoration: BoxDecoration(
+                          color: MyColors.lightBlueColor,
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(clock_icon),
+                          SizedBox(width: 10,),
+                          Text('Select Your Time Slot', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14, color: MyColors.blueColor),),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -157,7 +161,7 @@ class _BookNowScreenState extends State<BookNowScreen> {
                   children: [
                     Expanded(
                       child: GestureDetector(
-                        onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>BookNowScreen())),
+                        onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectDateAndTimeScreen())),
                         child: Container(
                           height: 60,
                           color: MyColors.redColor,

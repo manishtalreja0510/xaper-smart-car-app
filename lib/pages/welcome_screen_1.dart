@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
 import 'package:xaper_smart_car_app/pages/home_screen.dart';
+import 'package:xaper_smart_car_app/pages/register_screen.dart';
 
 class WelcomeScreen1 extends StatefulWidget {
   const WelcomeScreen1({Key? key}) : super(key: key);
@@ -102,9 +103,9 @@ class _WelcomeScreen1State extends State<WelcomeScreen1> {
                               bottom:50,
                               child: GestureDetector(
                                   onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen()));
                                   },
-                                child: Text('SKIPP', style: TextStyle(color: MyColors.blueColor),), ),
+                                child: Text('SKIP', style: TextStyle(color: MyColors.blueColor),), ),
                             ),
 
                           ],

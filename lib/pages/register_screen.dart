@@ -15,6 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -42,10 +43,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Text('REGISTER', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: MyColors.primaryColor),),
             TextField(
               controller: emailOrPhoneController,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 suffixIcon: Image.asset(phone_icon,),
                 labelText: 'Enter your phone number'
               ),
+              onChanged: (value){
+                if(value.length>=10){
+                  FocusScope.of(context).unfocus();
+                }
+              },
             ),
             SizedBox(height: 100,),
             Center(
