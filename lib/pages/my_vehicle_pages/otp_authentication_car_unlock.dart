@@ -4,20 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
+import 'package:xaper_smart_car_app/pages/connection_pages/connected_established_screen.dart';
+import 'package:xaper_smart_car_app/pages/connection_pages/connection_not_established.dart';
+import 'package:xaper_smart_car_app/pages/connection_pages/connection_step_3.dart';
 import 'package:xaper_smart_car_app/pages/home_screen.dart';
 
-class PinCodeVerificationScreen extends StatefulWidget {
+class OtpAuthenticationCarUnlock extends StatefulWidget {
   final Color textColor;
   final Color bgColor;
   final Color borderColor;
+  final String navigationFrom;
 
-  PinCodeVerificationScreen({required this.bgColor, required this.borderColor, required this.textColor});
+  OtpAuthenticationCarUnlock({required this.bgColor, required this.borderColor, required this.textColor, required this.navigationFrom});
 
   @override
-  _PinCodeVerificationScreenState createState() =>
-      _PinCodeVerificationScreenState();
+  _OtpAuthenticationCarUnlockState createState() =>
+      _OtpAuthenticationCarUnlockState();
 }
-class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
+class _OtpAuthenticationCarUnlockState extends State<OtpAuthenticationCarUnlock> {
   TextEditingController textEditingController = TextEditingController();
   // ..text = "123456";
 
@@ -112,8 +116,16 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                 setState(() {
                   currentText = value;
                 });
-                if(currentText == '0510'){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                if(currentText!='9731'&& widget.navigationFrom =='connectionStepOTPScreen' && currentText.length== 4 ){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ConnectionNotEstablishedScreen()));
+                }
+                else if(currentText=='9731'&& widget.navigationFrom =='connectionStepOTPScreen'){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ConnectionStep3()));
+                }
+                else if(currentText == '0510'&& widget.navigationFrom =='carUnlockOTPSceen'){
+                  Navigator.pop(context, true);
+                }else if(currentText.length== 4 && currentText!='0510'){
+                  Navigator.pop(context, false);
                 }
                 else{
                   print(currentText);

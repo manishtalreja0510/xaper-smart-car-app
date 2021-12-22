@@ -22,5 +22,6 @@ class MyColors{
 
   static const Color darkGreyColor = Color(0xFF575F71);
   static const Color darkBlueColor = Color(0xFF202533);
+  static const Color lightDarkBlueColor = Color(0xFF373E52);
 
 }

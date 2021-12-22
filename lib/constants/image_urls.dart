@@ -15,6 +15,11 @@ const station_details_background_image2 = "assets/images/station_details_backgro
 const visa_card = "assets/images/visa_card.png";
 const car_image = "assets/images/car_image.png";
 const car_top_view = "assets/images/car_top_view.png";
+const chargingSocket = "assets/images/chargingSocket.png";
+const plug1 = "assets/images/plug1.png";
+const plug2 = "assets/images/plug2.png";
+const plug3 = "assets/images/plug3.png";
+const connectionstep3bg = "assets/images/connectionstep3bg.png";
 
 
 
@@ -44,5 +49,6 @@ const car_icon = "assets/icons/car_icon.png";
 const menu_icon = "assets/icons/menu_icon.png";
 const unlock_icon = "assets/icons/unlock_icon.png";
 const tick_icon = "assets/icons/tick_icon.png";
+const calender_icon = "assets/icons/calender_icon.png";
 
 

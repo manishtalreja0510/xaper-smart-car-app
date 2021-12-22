@@ -46,7 +46,7 @@ class _EnterOtpScreenState extends State<EnterOtpScreen> {
                 ],
               ),
               SizedBox(height: 50,),
-              Expanded(child: PinCodeVerificationScreen('+919340223515')),
+              Expanded(child: PinCodeVerificationScreen(textColor: MyColors.blackColor, bgColor: MyColors.lightOrangeColor, borderColor: MyColors.orangeColor,),),
               SizedBox(height: 100,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
