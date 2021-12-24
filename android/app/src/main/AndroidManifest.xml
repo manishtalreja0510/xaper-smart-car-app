@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xaper_smart_car_app">
    <application
-        android:label="xaper_smart_car_app"
+        android:label="Abcaz"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

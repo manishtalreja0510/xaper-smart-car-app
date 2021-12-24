@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:xaper_smart_car_app/constants/colors.dart';
 import 'package:xaper_smart_car_app/constants/image_urls.dart';
 import 'package:xaper_smart_car_app/pages/register_screen_otp_screen.dart';
@@ -63,7 +64,17 @@ class _WaitingForOTPScreenState extends State<WaitingForOTPScreen> {
                         color: MyColors.lightBlueColor,
                         borderRadius: BorderRadius.circular(10)
                     ),
-                    child: Text('Terms and conditions will go here with more creative way', style: TextStyle(color: MyColors.blueColor),),
+                    child:  GestureDetector(
+                      onTap: () async{
+                        String link = 'https://loopskill.com/';
+                        if (await canLaunch(link)) {
+                          await launch(link);
+                        } else {
+                          throw 'Could not launch $link';
+                        }
+                      },
+                      child: Text('Terms and Conditions', textAlign: TextAlign.center, style: TextStyle(color: MyColors.blueColor)),
+                    ),
                   ),
                   Positioned(
                     right: 10,

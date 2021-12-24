@@ -5,6 +5,7 @@ import 'package:xaper_smart_car_app/pages/home_screen.dart';
 import 'package:xaper_smart_car_app/pages/register_screen.dart';
 import 'package:xaper_smart_car_app/pages/register_screen_otp_screen.dart';
 import 'package:xaper_smart_car_app/pages/welcome_screen_1.dart';
+import 'package:xaper_smart_car_app/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.amber,
       ),
       debugShowCheckedModeBanner: false,
-      home: const WelcomeScreen1()
+      home: const WelcomeScreen()
     );
   }
 }
